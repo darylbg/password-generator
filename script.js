@@ -1,8 +1,8 @@
 // Assignment Code
 var lowercaseletters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
 var uppercaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
-var specialCharachters = ["!", "#", "$", "%", "&", "(", ")", "*", "+"];
-var numerals = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var specialCharachters = ["!", "#", "$", "%", "&", "(",")", "*", "+"];
+var numerals = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 
@@ -12,6 +12,7 @@ function generatePassword() {
   console.log("hey you clicked the button")
 //1a prompt the user for the password critiria
   var passwordLength = prompt("Please select the length of the password between 8 - 128 digits.");
+  console.log(passwordLength);
 
   //1b passwoard length btwn 8 - 125
   if ((passwordLength >= 8) && (passwordLength <= 128)) {
@@ -35,22 +36,34 @@ function generatePassword() {
   if ((lowercaseCheck == false) && (uppercaseCheck == false) && (specialCharachterCheck == false) && (numeralCheck == false)) {
     alert("You must select at least one option please try again");
   }
+
+
   
-  if ((lowercaseCheck == false) && (uppercaseCheck == false) && (specialCharachterCheck == false) && (numeralCheck == true)) {
-    var result = numerals.sort();
-  }
+//function getRandomEl(array) {
+//    var randomIndex = Math.floor(Math.random() * array.length)
+ //   array.push(randomIndex);
+//    console.log(randomIndex);
+//}
+
+
+if ((lowercaseCheck == false) && (uppercaseCheck == false) && (specialCharachterCheck == false) && (numeralCheck == true)) {
+  var array = [];
+  for (i = 0; i < passwordLength; i++) {
+    var randomIndex = Math.floor(Math.random()*numerals.length);
+    array.push(randomIndex);
+    console.log(randomIndex);
+    console.log(array);
+  } 
   
+}
 
          
 //1b passwoard length btwn 8 - 125
 //1c lowercase uppercase special charachters
 //2 validate the input 
 //3 generate password
-
-
-
 //4 display generated password 
-  return result
+  return array.join("");
 }
 
 // Write password to the #password input
