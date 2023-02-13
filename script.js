@@ -39,24 +39,58 @@ function generatePassword() {
 
 
   
-//function getRandomEl(array) {
-//    var randomIndex = Math.floor(Math.random() * array.length)
- //   array.push(randomIndex);
-//    console.log(randomIndex);
-//}
+// function getRandomEl(array1) {
+//   var array = [];
+//   for (i = 0; i < passwordLength; i++) {
+//     var randomIndex = array1[Math.floor(Math.random()*array1.length)];
+//     array.push(randomIndex);
+//     console.log(randomIndex);
+//     console.log(array);
+//   } 
+// }
 
 
 if ((lowercaseCheck == false) && (uppercaseCheck == false) && (specialCharachterCheck == false) && (numeralCheck == true)) {
+   var array = [];
+   for (i = 0; i < passwordLength; i++) {
+     var randomIndex = numerals[Math.floor(Math.random()*numerals.length)];
+     array.push(randomIndex);
+     console.log(randomIndex);
+     console.log(array);
+   } 
+  
+}
+
+if ((lowercaseCheck == false) && (uppercaseCheck == false) && (specialCharachterCheck == true) && (numeralCheck == false)) {
   var array = [];
   for (i = 0; i < passwordLength; i++) {
-    var randomIndex = Math.floor(Math.random()*numerals.length);
-    array.push(randomIndex);
-    console.log(randomIndex);
+    var randomIndex1 = specialCharachters[Math.floor(Math.random() * specialCharachters.length)];
+    array.push(randomIndex1);
+    console.log(randomIndex1);
+    console.log(array);
+  } 
+}
+
+if ((lowercaseCheck == true) && (uppercaseCheck == false) && (specialCharachterCheck == false) && (numeralCheck == false)) {
+  var array = [];
+  for (i = 0; i < passwordLength; i++) {
+    var randomIndex1 = lowercaseletters[Math.floor(Math.random() * lowercaseletters.length)];
+    array.push(randomIndex1);
+    console.log(randomIndex1);
+    console.log(array);
+  } 
+}  
+
+if ((lowercaseCheck == false) && (uppercaseCheck == true) && (specialCharachterCheck == false) && (numeralCheck == false)) {
+  var array = [];
+  for (i = 0; i < passwordLength; i++) {
+    var randomIndex1 = uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)];
+    array.push(randomIndex1);
+    console.log(randomIndex1);
     console.log(array);
   } 
   
 }
-
          
 //1b passwoard length btwn 8 - 125
 //1c lowercase uppercase special charachters
