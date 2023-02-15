@@ -7,7 +7,7 @@ The random generator is built mainly in Javascript with some minimal HTML and CS
 
 Live deployment of this page can be found here: "https://darylbg.github.io/password-generator/"
 The github repository with the source code can be found here: "https://github.com/darylbg/password-generator"
-The deployed website will look similar to this screenshot: ![screenshot](assets/03-javascript-homework-demo.png)
+The deployed website will look similar to this screenshot: ![screenshot](Assets/03-javascript-homework-demo.png)
 
 ## Usage
 
